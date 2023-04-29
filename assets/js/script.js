@@ -82,6 +82,7 @@ const question = document.getElementById("question");
 const a_text = document.getElementById("a_text");
 const b_text = document.getElementById("b_text");
 const c_text = document.getElementById("c_text");
+const submitBtn = document.getElementById("submit");
 
 let currentQuiz = 0;
 let score = 0;
@@ -89,10 +90,10 @@ let score = 0;
 let username = document.getElementById("user");
 let questionsQuiz = document.getElementById("question-container");
 questionsQuiz.style.display = "none";
-let feedback = document.getElementById("feedback");
-feedback.style.display = "none";
+// let feedback = document.getElementById("feedback");
+// feedback.style.display = "none";
 
-loadQuiz();
+
 
 function loadQuiz() {
 
@@ -108,7 +109,7 @@ function loadQuiz() {
 }
 
 function deselectAnswers() {
-    answer.forEach(answer => answer.checked = false);
+    answer.forEach(answerR => answerR.checked = false);
 }
 
 function introQuiz() {
@@ -128,9 +129,36 @@ function introQuiz() {
 function startQuiz() {
     questionsQuiz.style.display = "block";
     // for loop with questions, if all are done - function feedback
-
+    loadQuiz();
 }
 
-// function feedbackQuiz {
-//     feedback.style.display = "block";
-// }
+function getSelected() {
+    let reply;
+    answer.forEach(answerR => {
+        if (answerR.checked) {
+            reply = answerR.id;
+        }
+    });
+    return reply;
+}
+
+submitBtn.addEventListener("click", () => {
+    const reply = getSelected();
+    if (reply) {
+        if (reply === questionsData[currentQuiz].correct) {
+            score++;
+        }
+
+        currentQuiz++;
+
+        if (currentQuiz < questionsData.length) {
+            loadQuiz();
+        } else {
+            let html = `
+            <h2>Well done, ${username.value}! You answered ${score} / 15 questions correctly</h2>
+            <button onclick="location.reload();" class="start-btn">Play again</button>
+            `;
+            questionsQuiz.innerHTML = html;
+        }
+    }
+})
