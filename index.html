@@ -9,14 +9,14 @@
 </head>
 <body>
     <!-- heading -->
-    <h1 class="heading">Countries & Capitals Quiz</h1>
+    <h1 class="heading">Countries & Capitals Quiz</h1> <br>
     <div class="container">
         <!-- ask username and start the quiz -->
         <div id="username" class="hide">
-            <h2>Please enter your username to start the quiz</h2>
+            <h2>Enter your username to start the quiz</h2>
             <label for="user">Username:</label> <br>
             <input type="text" id="user" name="username" required > <br>
-            <button onclick="introQuiz();">Start</button>
+            <button onclick="introQuiz();" class="start-btn" id="start">Start</button>
         </div> 
         <!-- questions -->
         <div id="question-container" class="hide">
@@ -37,10 +37,11 @@
                     <label for="c" id="c_text">Answer</label>
                 </li>
             </ul>
-        </div>
-<!-- button -->
-        <div class="controls">
             <button id="submit" class="start-btn btn hide">Submit</button>
+        </div>
+        <!-- feedback and take the quiz again -->
+        <div id="feedback">
+            <button class="start-btn" id="again">Play again</button>
         </div>
     </div>
     <script src="assets/js/script.js"></script>
