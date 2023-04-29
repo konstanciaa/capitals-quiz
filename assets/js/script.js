@@ -1,4 +1,4 @@
-const questions = [
+const questionsData = [
     {
         text: "What is the capital of Türkiye?",
         answers: ["Istanbul", "Ankara", "Antalya"],
@@ -76,12 +76,40 @@ const questions = [
     }
 ];
 
+const quiz = document.getElementById("container");
+const answer = document.querySelectorAll(".answer");
+const question = document.getElementById("question");
+const a_text = document.getElementById("a_text");
+const b_text = document.getElementById("b_text");
+const c_text = document.getElementById("c_text");
+
+let currentQuiz = 0;
+let score = 0;
+
 let username = document.getElementById("user");
 let questionsQuiz = document.getElementById("question-container");
 questionsQuiz.style.display = "none";
 let feedback = document.getElementById("feedback");
 feedback.style.display = "none";
 
+loadQuiz();
+
+function loadQuiz() {
+
+    deselectAnswers();
+
+    const currentQuestionsData = questionsData[currentQuiz];
+
+    question.innerText = currentQuestionsData.text;
+    a_text.innerText = currentQuestionsData.answers[0];
+    b_text.innerText = currentQuestionsData.answers[1];
+    c_text.innerText = currentQuestionsData.answers[2];
+
+}
+
+function deselectAnswers() {
+    answer.forEach(answer => answer.checked = false);
+}
 
 function introQuiz() {
     let usernameDiv = document.getElementById("username");
