@@ -90,9 +90,6 @@ let score = 0;
 let username = document.getElementById("user");
 let questionsQuiz = document.getElementById("question-container");
 questionsQuiz.style.display = "none";
-// let feedback = document.getElementById("feedback");
-// feedback.style.display = "none";
-
 
 
 function loadQuiz() {
@@ -128,7 +125,7 @@ function introQuiz() {
 // show questions 
 function startQuiz() {
     questionsQuiz.style.display = "block";
-    // for loop with questions, if all are done - function feedback
+    
     loadQuiz();
 }
 
@@ -154,11 +151,35 @@ submitBtn.addEventListener("click", () => {
         if (currentQuiz < questionsData.length) {
             loadQuiz();
         } else {
-            let html = `
+            questionsQuiz.innerHTML = `
             <h2>Well done, ${username.value}! You answered ${score} / 15 questions correctly</h2>
             <button onclick="location.reload();" class="start-btn">Play again</button>
             `;
-            questionsQuiz.innerHTML = html;
         }
     }
 })
+
+
+// function getSelected() {
+//     for (let currentQuestionsData of questionsData) {
+//         if (answer === questionsData[currentQuiz].correct) {
+//             score++;
+//         }
+
+//         currentQuiz++;
+
+//         if (currentQuiz < questionsData.length) {
+//             loadQuiz();
+//         } else {
+//             questionsQuiz.innerHTML = `
+//             <h2>Well done, ${username.value}! You answered ${score} / 15 questions correctly</h2>
+//             <button onclick="location.reload();" class="start-btn">Play again</button>
+//             `;
+//         }
+
+//     }
+
+    
+// }
+
+// submitBtn.addEventListener("click", getSelected);

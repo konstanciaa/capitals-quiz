@@ -22,8 +22,16 @@ body {
     font-family: 'Montserrat', sans-serif; 
 }
 
+#capitals {
+    margin: 20px auto;
+    padding-bottom: 1px;
+    width: 40vw;
+    max-width: 80%;
+    background-color: #1d1e47b8;
+    border-radius: 10px;
+}
 
-.container  {
+#container  {
     background-color: rgba(248,247,247, 0.8);
     border-radius: 10px;
     width: 35vw;
