@@ -14,10 +14,23 @@ The web application is designed to be responsible on a range of devices.
 
 ### User stories
 
+    a. As a User, I want to understand the purpose of the site.
+    
+    b. As a User, I want to see clearly written instructions that explain what to do.
+
+    c. As a User, I want to quickly understand how to play.
+
+    d. As a User, I also want to easily navigate the website.
+
+    e. As a User, I want to see my score points.
+
+    f.  As a User, I want to understand how to play the quiz again.
+
+   
 ## User Experience Design (UXD)
 + **Strategy Plane**. A quiz for enterntainment which provides users with the opportunity to check their knowledge of capitals.
-+ **Scope Plane**. 
-+ **Structure Plane**. 
++ **Scope Plane**. The title of the quiz, instructions, input for username and the start button. After clicking "Start" button the user sees one question with three options at a time (which helps not to distract). There is "Next" button under under the option. The "Next" button submits the answer and opens the next question.
++ **Structure Plane**. The introduction window contains simple clear instructions how to start and rules how to play. 
 + **Skeleton Plane**. 
 ![Introduction with instructions wireframe](/docs/intro-wireframe.png)
 ![Quiz questions wireframe](/docs/quiz-wireframe.png)
@@ -26,20 +39,36 @@ The web application is designed to be responsible on a range of devices.
 + **Surface Plane**. 
 
 Fonts: *Montserrat*
+Background image: a picture of the night Earth
+Colors: taken from the background image
 
 
 ## Features
 
+### Quiz Title
++ The Quiz Title is located at the top of the page. It gives a clear idea of what is the web application about. 
++ The font and the color made it easy to read.
+
+![A screenshot of title](/docs/heading.png)
+
+### Background Image
++ The background image is a photo of the Earth at night. It helps the user to switch to the right mood.
+
+### Instructions
++ 
+
+![The background image](/assets/images/background-image.jpg)
+
 ## Future Features
-+ Timer
-+ Save scores
++ Timer to limit th time for the answer to reduce cheating
++ Save scores for returning users
 
 ## Testing
 
 ## Bugs
 
 #### Solved bugs
-+ score is always 0 no matter how many right answers I choose
++ score is always 0 no matter how many right answers were chosen
 
 ## Validator Testing
 
