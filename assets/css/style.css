@@ -47,9 +47,20 @@ body {
     margin: 0 auto;
 }
 
+p {
+    padding: 0 30px;
+}
+
+#instructions {
+    padding: 0 50px;
+}
 
 #question-container {
     padding: 4rem;
+}
+
+#input-box {
+    padding-left: 30px;
 }
 
 /* question */
@@ -94,4 +105,42 @@ ul li label {
 
 .start-btn:hover {
     background-color: #010020;
+}
+
+/* Media queries */
+
+/* iPad */
+@media screen and (max-width: 900px) {
+    #container {
+        width: 60vw;
+        background-color: rgba(248,247,247, 0.9);
+    }
+}
+
+/* iPhone 12 Pro */
+@media screen and (max-width: 500px) {
+    #capitals {
+        width: 65vw;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    #container {
+        width: 70vw;
+        background-color: rgba(248,247,247, 0.8);
+        font-size: 14px;
+    }
+}
+
+/* iPhone 4 */
+@media screen and (max-width: 350px) {
+    #capitals {
+        width: 50vw;
+    }
+
+    h1 {
+        font-size: 1.4rem;
+    }
 }
