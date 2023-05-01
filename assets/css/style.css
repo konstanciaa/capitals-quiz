@@ -47,6 +47,12 @@ body {
     margin: 0 auto;
 }
 
+hr {
+    margin: 0;
+    height: 3px;
+    border-radius: 10px;
+}
+
 p {
     padding: 0 30px;
 }
@@ -61,11 +67,12 @@ p {
 
 #input-box {
     padding-left: 30px;
+    padding-top: 10px;
 }
 
 /* question */
 h2 {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     padding: 1rem;
     text-align: center;
     margin: 0;
@@ -132,6 +139,18 @@ ul li label {
         background-color: rgba(248,247,247, 0.8);
         font-size: 14px;
     }
+
+    #question-container {
+        padding: 1rem;
+    }
+
+    ul:not(#instructions) {
+        padding-left: 15px;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
 }
 
 /* iPhone 4 */
@@ -142,5 +161,26 @@ ul li label {
 
     h1 {
         font-size: 1.4rem;
+    }
+
+    h2 {
+        font-size: 1rem;
+    }
+
+    #container {
+        background-color: rgba(248,247,247, 0.8);
+        font-size: 12px;
+    }
+
+    p {
+        padding: 0 20px;
+    }
+
+    #instructions {
+        padding: 0 30px;
+    }
+
+    ul li :not(#instructions) {
+        font-size: 1rem;
     }
 }
