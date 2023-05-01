@@ -89,30 +89,19 @@ const submitBtn = document.getElementById("submit");
 let currentQuiz = 0;
 let score = 0;
 
+// username input
 let username = document.getElementById("user");
+
 
 // hide question container
 let questionsQuiz = document.getElementById("question-container");
 questionsQuiz.style.display = "none";
 
-
-function loadQuiz() {
-
-    deselectAnswers();
-
-    const currentQuestionsData = questionsData[currentQuiz];
-
-    question.innerText = currentQuestionsData.text;
-    a_text.innerText = currentQuestionsData.answers[0];
-    b_text.innerText = currentQuestionsData.answers[1];
-    c_text.innerText = currentQuestionsData.answers[2];
-
-}
-
-function deselectAnswers() {
-    answer.forEach(answerR => answerR.checked = false);
-}
-
+/**
+ * check if the user entered username
+ * if yes, hide intoduction and start the quiz
+ * if no, show alert message and ask to enter username
+ */
 function introQuiz() {
     let usernameDiv = document.getElementById("username");
     // check if the user entered username
@@ -126,14 +115,44 @@ function introQuiz() {
     
 }
 
-// show questions 
+
+/**
+ * show question container
+ */
 function startQuiz() {
     questionsQuiz.style.display = "block";
     
     loadQuiz();
 }
 
-// returning value for the selected input
+/**
+ * deselect answers
+ * set question and answers text
+ */
+function loadQuiz() {
+
+    deselectAnswers();
+
+    const currentQuestionsData = questionsData[currentQuiz];
+
+    question.innerText = currentQuestionsData.text;
+    a_text.innerText = currentQuestionsData.answers[0];
+    b_text.innerText = currentQuestionsData.answers[1];
+    c_text.innerText = currentQuestionsData.answers[2];
+
+}
+
+/**
+ * deselect answers
+ */
+function deselectAnswers() {
+    answer.forEach(answerR => answerR.checked = false);
+}
+
+
+/**
+ * returning value for the selected input
+ */ 
 function getSelected() {
     let reply;
     answer.forEach(answerR => {
@@ -144,7 +163,12 @@ function getSelected() {
     return reply;
 }
 
-
+/**
+ * checking if the selected input is correct
+ * if yes, score the point and show the next question
+ * if no, show the next question
+ * show score points and button "Play again" which reloads the page
+ */
 submitBtn.addEventListener("click", () => {
     const reply = getSelected();
     if (reply) {

@@ -75,7 +75,7 @@ ul li :not(#instructions) {
     margin: 1rem 0;
 }
 
-ul li label :not(#instructions) {
+ul li label {
     cursor: pointer;
 }
 
@@ -87,7 +87,7 @@ ul li label :not(#instructions) {
     display: block;
     font-size: 1rem;
     padding: 10px 15px;
-    margin: 10px auto;
+    margin: 20px auto;
     border-radius: 10px;
     cursor: pointer;
 }
