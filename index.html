@@ -8,40 +8,64 @@
     <title>Capitals Quiz</title>
 </head>
 <body>
-    <!-- heading -->
-    <div id="capitals">
-    <h1 class="heading">Countries & Capitals Quiz</h1>
-    </div> <br>
-    <div id="container">
-        <!-- ask username and start the quiz -->
-        <div id="username" class="hide">
-            <h2>Enter your username to start the quiz</h2>
-            <label for="user" id="label-name">Username:</label> <br>
-            <input type="text" id="user" name="username" required > <br>
-            <button onclick="introQuiz();" class="start-btn" id="start">Start</button>
-        </div> 
-        <!-- questions -->
-        <div id="question-container" class="hide">
-            <h2 id="question">Question</h2>
-            <ul>
-                <li>
-                    <input type="radio" name="answer" id="a" class="answer">
-                    <label for="a" id="a_text">Answer</label>
-                </li>
+    <!-- header section -->
+    <header>
+        <div id="capitals">
+        <h1 class="heading">Countries & Capitals Quiz</h1>
+        </div> <br>
+    </header> 
+    <!-- main content -->
+    <main>
+        <div id="container">
+            <!-- ask username and start the quiz -->
+            <section>
+                <div id="username" class="hide">
+                    <h2>Enter your username to start the quiz</h2>
+                    <!-- instructions how to play -->
+                    <p>Do you enjoy traveling?</p>
+                    <p>Check how many countries and capitals you know.</p>
+                    <ul id="instructions">
+                        <li>Enter your username to start the quiz.</li>
+                        <li>There are 15 questions. You can't skip any.</li>
+                        <li>Choose the answer and click the "Next" button.</li>
+                        <li>You can see your score in the end of the quiz.</li>
+                        <li>You can take the quiz again by clicking the "Play again" button.</li>
+                    </ul>
+                    <p>Have fun!</p>
+                    <!-- input box for username -->
+                    <div id="input-box">
+                    <label for="user" id="label-name">Username:</label> <br>
+                    <input type="text" id="user" name="username" required > <br>
+                    </div>
+                    <!-- button to start the quiz -->
+                    <button onclick="introQuiz();" class="start-btn" id="start">Start</button>
+                </div>
+            </section>
+            <!-- questions section -->
+            <section>
+                <div id="question-container" class="hide">
+                    <h2 id="question">Question</h2>
+                    <ul>
+                        <li>
+                            <input type="radio" name="answer" id="a" class="answer">
+                            <label for="a" id="a_text">Answer</label>
+                        </li>
 
-                <li>
-                    <input type="radio" name="answer" id="b" class="answer">
-                    <label for="b" id="b_text">Answer</label>
-                </li>
+                        <li>
+                            <input type="radio" name="answer" id="b" class="answer">
+                            <label for="b" id="b_text">Answer</label>
+                        </li>
 
-                <li>
-                    <input type="radio" name="answer" id="c" class="answer">
-                    <label for="c" id="c_text">Answer</label>
-                </li>
-            </ul>
-            <button id="submit" class="start-btn">Submit</button>
+                        <li>
+                            <input type="radio" name="answer" id="c" class="answer">
+                            <label for="c" id="c_text">Answer</label>
+                        </li>
+                    </ul>
+                    <button id="submit" class="start-btn">Next</button>
+                </div>
+            </section>
         </div>
-    </div>
+    </main>
     <script src="assets/js/script.js"></script>
 </body>
 </html>

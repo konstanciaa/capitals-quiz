@@ -1,3 +1,4 @@
+// array containing questions
 const questionsData = [
     {
         text: "What is the capital of Türkiye?",
@@ -76,6 +77,7 @@ const questionsData = [
     }
 ];
 
+// variables for quiz, questions and answers
 const quiz = document.getElementById("container");
 const answer = document.querySelectorAll(".answer");
 const question = document.getElementById("question");
@@ -88,6 +90,8 @@ let currentQuiz = 0;
 let score = 0;
 
 let username = document.getElementById("user");
+
+// hide question container
 let questionsQuiz = document.getElementById("question-container");
 questionsQuiz.style.display = "none";
 
@@ -129,15 +133,17 @@ function startQuiz() {
     loadQuiz();
 }
 
+// returning value for the selected input
 function getSelected() {
     let reply;
     answer.forEach(answerR => {
         if (answerR.checked) {
-            reply = answerR.id;
+            reply = answerR.nextElementSibling.innerHTML;
         }
     });
     return reply;
 }
+
 
 submitBtn.addEventListener("click", () => {
     const reply = getSelected();
@@ -159,27 +165,3 @@ submitBtn.addEventListener("click", () => {
     }
 })
 
-
-// function getSelected() {
-//     for (let currentQuestionsData of questionsData) {
-//         if (answer === questionsData[currentQuiz].correct) {
-//             score++;
-//         }
-
-//         currentQuiz++;
-
-//         if (currentQuiz < questionsData.length) {
-//             loadQuiz();
-//         } else {
-//             questionsQuiz.innerHTML = `
-//             <h2>Well done, ${username.value}! You answered ${score} / 15 questions correctly</h2>
-//             <button onclick="location.reload();" class="start-btn">Play again</button>
-//             `;
-//         }
-
-//     }
-
-    
-// }
-
-// submitBtn.addEventListener("click", getSelected);

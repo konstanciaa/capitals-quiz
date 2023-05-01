@@ -1,9 +1,11 @@
+/* google fonts */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 
 * {
     box-sizing: border-box;
 }
 
+/* header */
 h1 {
     text-align: center;
     color: #f8f7f7;
@@ -14,7 +16,7 @@ h1 {
 body {
     padding: 0;
     margin: 0;
-    background-image: url(/assets/images/background-image.jpg);
+    background-image: url(../images/background-image.jpg);
     background-color: black;
     height: 100vh;
     background-position: center;
@@ -22,6 +24,7 @@ body {
     font-family: 'Montserrat', sans-serif; 
 }
 
+/* background for header to make it easier to read */
 #capitals {
     margin: 20px auto;
     padding-bottom: 1px;
@@ -31,6 +34,7 @@ body {
     border-radius: 10px;
 }
 
+/* container for the main content */
 #container  {
     background-color: rgba(248,247,247, 0.8);
     border-radius: 10px;
@@ -43,10 +47,12 @@ body {
     margin: 0 auto;
 }
 
+
 #question-container {
     padding: 4rem;
 }
 
+/* question */
 h2 {
     font-size: 1.3rem;
     padding: 1rem;
@@ -58,20 +64,22 @@ h2 {
     font-size: 0.8rem;
 }
 
-ul {
+/* styles for the answers excluding the instructions bullet point list*/
+ul:not(#instructions) {
     list-style-type: none;
     padding: 0;
 }
 
-ul li {
+ul li :not(#instructions) {
     font-size: 1.2rem;
     margin: 1rem 0;
 }
 
-ul li label {
+ul li label :not(#instructions) {
     cursor: pointer;
 }
 
+/* button */
 .start-btn {
     background-color: #1d1e47;
     color: hsl(0, 0%, 100%, 0.8);
