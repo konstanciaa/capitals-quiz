@@ -1,14 +1,32 @@
 # Countries & Capitals Quiz
 
-The Countries & Capitals Quiz is made for an enterntainment. This quiz contains 15 questions. Every question has three options. User should enter username to start the quiz. In the end of the quiz user can see how many answers were correct.
+[View the live project here.](https://konstanciaa.github.io/capitals-quiz/)
 
-The website is designed to be responsible on a range of devices.
+The Countries & Capitals Quiz is made for enterntainment. The quiz contains 15 questions. Users can check their knowledge of capitals of 15 countries of the world. Every question has three options. In the end of the quiz user can see how many chosen answers were correct.
+
+The web application is designed to be responsible on a range of devices.
+
+![A screenshot of the website on different devices](/docs/responsive-intro.png)
+
+![A screenshot of the website on different devices](/docs/responsive-quiz.png)
 
 ## User Experience (UX)
 
 ### User stories
 
 ## User Experience Design (UXD)
++ **Strategy Plane**. A quiz for enterntainment which provides users with the opportunity to check their knowledge of capitals.
++ **Scope Plane**. 
++ **Structure Plane**. 
++ **Skeleton Plane**. 
+![Introduction with instructions wireframe](/docs/intro-wireframe.png)
+![Quiz questions wireframe](/docs/quiz-wireframe.png)
+![Scores wireframe](/docs/scores-wireframe.png)
+
++ **Surface Plane**. 
+
+Fonts: *Montserrat*
+
 
 ## Features
 
