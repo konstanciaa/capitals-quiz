@@ -24,8 +24,8 @@ The web application is designed to be responsible on a range of devices.
    
 ## User Experience Design (UXD)
 + **Strategy Plane**. A quiz for enterntainment which also provides users with the opportunity to check their knowledge of the capitals.
-+ **Scope Plane**. The title of the quiz, instructions, input for username and the start button. There is "Next" button under under the option. The "Next" button submits the answer and opens the next question. There are scores under the "Next" button. After the 15th question the user can see a panel with score points. There is also a "Play again" button which reloads the quiz.
-+ **Structure Plane**. The introduction window contains simple clear instructions how to start and the rules how to play. After entering username and clicking "Start" button the user sees one question with three options at a time. The "Next" button submits the answer and opens the next question. Right under the button the user can see their score points along the way. After answering the 15th question the user can see a panel with their username and score points. There is also a "Play again" button which reloads the quiz.
++ **Scope Plane**. The title of the quiz, instructions, input for username and the start button. There is "Next" button under the options. The "Next" button submits the answer and opens the next question. There are scores under the "Next" button. After the 15th question the user can see a panel with score points. There is also a "Play again" button which reloads the quiz.
++ **Structure Plane**. The introduction window contains simple clear instructions how to start and the rules how to play. After entering username and clicking "Start" button the user sees one question with three options at a time. The "Next" button submits the answer and opens the next question. Right under the button the user can see their score points along the way. After answering the 15th question the user can see a feedback panel with their username and score points. There is also a "Play again" button which reloads the quiz.
 + **Skeleton Plane**. 
 ![Introduction with instructions wireframe](/docs/intro-wireframe.png)
 ![Quiz questions wireframe](/docs/quiz-wireframe.png)
@@ -44,12 +44,12 @@ Colors: *taken from the background image*
 
 ### Header
 + The header is located at the top of the page. It gives a clear idea of what the web application is about - "Countries & Capitals Quiz".
-+ The font and the color make it easy to read.
++ The font and the colors make it easy to read.
 
 ![A screenshot of title](/docs/heading.png)
 
 ### Background Image
-+ The background image is a photo of the Earth at night. It helps the user to switch to set the right state of mind and to focus on the quiz topic.
++ The background image is a photo of the Earth at night. It helps the user to switch to the right state of mind and to focus on the quiz topic.
 
 ![The background image](/assets/images/background-image.jpg)
 
@@ -76,7 +76,7 @@ Colors: *taken from the background image*
 + Timer to limit time for the answer which also can help to reduce cheating
 + Save scores for returning users
 + Two levels of difficulty
-+ Different feedback depending on score points
++ Different feedback depending on score points result
 
 ## Testing
 
@@ -87,7 +87,7 @@ Colors: *taken from the background image*
 |Try to click "Start" without entering username. |The alert message appears at the top of the page. It says: "Please enter your username first".             
 |Type your username. | The text of the input is clear and readable.
 |Click the button "Start". |It starts the quiz and shows the first question.
-|Choose an answer and click "Next". |It opens the next question.
+|Choose an answer and click "Next". |It opens the next question and shows the score.
 |Try to answer all 15 questions. |All questions work properly.
 |Check your score points after answering the last question. |It shows my username and score correctly.
 |Try to click "Play again". |The page reloads. I can see the instructions and start again.
@@ -119,13 +119,17 @@ Score was always 0 no matter how many right answers were chosen.
 
 ![A screenshot of test result on Jshint](/docs/jshint.png)
 
+### Accessibilty
++ I confirmed that the colors and fonts chosen are easy to read and accessible by running it through lighthouse in devtools.
+
+![A screenshot of lighthouse test result](/docs/lighthouse.png)
 
 #### Unfixed Bugs
 + No unfixed bugs
 
 ## Testing User Stories from User Experience (UX) Section
 
-1. As a User, I want to understand the purpose of the website.
+1. As a User, I want to understand the purpose of the web application.
 + *Upon entering the site, users are automatically greeted with a clear and easily readable title which gives and idea of what is it about.*
 2. As a User, I want to see clearly written instructions which explain what to do.
 + *At the very first panel right below the title users can read clear and simple instructions about the actions required to start the quiz.*
@@ -170,7 +174,7 @@ Any contributions are greatly appreciated. If you have a suggestion that would m
 + JavaScript
 
 #### Programs Used
-+ **Google Fonts** were used to import the 'Oswald' and 'Source Serif Pro' fonts into the style.css file which are used on all pages throughout the project.
++ **Google Fonts** were used to import the 'Montserrat' font into the style.css file which is used in the project.
 + **Git** was used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub.
 + **GitHub** is used to store the projects code after being pushed from Git.
 + **Balsamiq** was used to create wireframes.
@@ -178,7 +182,7 @@ Any contributions are greatly appreciated. If you have a suggestion that would m
 ## Credits
 
 #### Code
-+ The code for hiding introduction panel came form this [YouTube video tutorial](https://youtu.be/79WRPIknVHs).
++ The code for hiding introduction panel came from this [YouTube video tutorial](https://youtu.be/79WRPIknVHs).
 + The code for writing functions that run the quiz questions came from this [YouTube video tutorial](https://youtu.be/CqddbIrEM5I).
 
 #### Content
