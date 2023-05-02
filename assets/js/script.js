@@ -77,14 +77,14 @@ const questionsData = [
     }
 ];
 
-// variables for quiz, questions and answers
-const quiz = document.getElementById("container");
+// variables for questions, answers, submit button and scores
 const answer = document.querySelectorAll(".answer");
 const question = document.getElementById("question");
 const a_text = document.getElementById("a_text");
 const b_text = document.getElementById("b_text");
 const c_text = document.getElementById("c_text");
 const submitBtn = document.getElementById("submit");
+const scoresQuiz = document.getElementById("scores-quiz");
 
 let currentQuiz = 0;
 let score = 0;
@@ -110,9 +110,7 @@ function introQuiz() {
         startQuiz();
     } else {
         alert("Please enter your username first");
-    }
-    
-    
+    } 
 }
 
 
@@ -139,7 +137,6 @@ function loadQuiz() {
     a_text.innerText = currentQuestionsData.answers[0];
     b_text.innerText = currentQuestionsData.answers[1];
     c_text.innerText = currentQuestionsData.answers[2];
-
 }
 
 /**
@@ -165,7 +162,7 @@ function getSelected() {
 
 /**
  * checking if the selected input is correct
- * if yes, score the point and show the next question
+ * if yes, score the point and show the next question 
  * if no, show the next question
  * show score points and button "Play again" which reloads the page
  */
@@ -175,7 +172,7 @@ submitBtn.addEventListener("click", () => {
         if (reply === questionsData[currentQuiz].correct) {
             score++;
         }
-
+        scoresQuiz.innerHTML = `<p>Your score: ${score} / 15<p>`;
         currentQuiz++;
 
         if (currentQuiz < questionsData.length) {

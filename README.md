@@ -60,7 +60,7 @@ Colors: *taken from the background image*
 
 ### Instructions
 + This section gives detailed instructions and asks to enter username. 
-+ Users are able to start the quiiz only after entering username.
++ Users are able to start the quiz only after entering username.
 
 ![A screenshot of introduction and instructions](/docs/instructions.png)
 

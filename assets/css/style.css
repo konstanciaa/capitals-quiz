@@ -114,6 +114,12 @@ ul li label {
     background-color: #010020;
 }
 
+/* shows scores under each question */
+#scores-quiz {
+    text-align: center;
+    padding-top: 5px;
+}
+
 /* Media queries */
 
 /* iPad */
