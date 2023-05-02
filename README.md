@@ -2,7 +2,7 @@
 
 [View the live project here.](https://konstanciaa.github.io/capitals-quiz/)
 
-The Countries & Capitals Quiz is made for enterntainment. The quiz contains 15 questions. Users can check their knowledge of capitals of 15 countries of the world. Every question has three options. In the end of the quiz user can see how many chosen answers were correct.
+The Countries & Capitals Quiz is an interactive web application made for enterntainment. The quiz contains 15 questions. Users can check their knowledge of capitals of 15 countries of the world. Every question has three options. In the end of the quiz user can see how many chosen answers were correct.
 
 The web application is designed to be responsible on a range of devices.
 
@@ -14,7 +14,7 @@ The web application is designed to be responsible on a range of devices.
 
 ### User stories
 
-1. As a User, I want to understand the purpose of the website.
+1. As a User, I want to understand the purpose of the web application.
 2. As a User, I want to see clearly written instructions which explain what to do.
 3. As a User, I want to quickly understand how to play.
 4. As a User, I also want to easily navigate the web application.
@@ -42,8 +42,8 @@ Colors: *taken from the background image*
 
 ## Features
 
-### Quiz Title
-+ The Quiz Title is located at the top of the page. It gives a clear idea of what is the web application about. 
+### Header
++ The header is located at the top of the page. It gives a clear idea of what the web application is about - "Countries & Capitals Quiz".
 + The font and the color make it easy to read.
 
 ![A screenshot of title](/docs/heading.png)
@@ -96,7 +96,7 @@ Colors: *taken from the background image*
 ## Bugs
 
 #### Solved bugs
-+ score was always 0 no matter how many right answers were chosen.
+Score was always 0 no matter how many right answers were chosen.
 + the function which returns value of the selected input compared it to the answer's id, not to the value itself.
 + the code was changed so now it checks if the selected input is equal to the correct answer's value.
 
