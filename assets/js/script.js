@@ -184,5 +184,5 @@ submitBtn.addEventListener("click", () => {
             `;
         }
     }
-})
+});
 

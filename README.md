@@ -116,6 +116,10 @@ Colors: *taken from the background image*
 #### JavaScript
 + No significant issues were returned when passing through [Jshint](https://jshint.com/)
 
+ *"introQuiz" is a function. It's called in HTML file when "Start" button is clicked*
+
+![A screenshot of test result on Jshint](/docs/jshint.png)
+
 
 #### Accessibilty
 
